@@ -1,0 +1,12 @@
+<div class="well">
+	<p>
+	<strong>Created by:</strong>
+	<%= comment.commenter %>
+	</p>
+	<hr>
+	<p>
+	<%= comment.body %>
+	</p>
+	<hr>
+	<%= link_to 'Delete Comment', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'},class: "btn btn-danger btn-xs" %>
+</div>

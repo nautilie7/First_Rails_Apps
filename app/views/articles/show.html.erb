@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="page-header">
+				<h2><%= @article.title %></h2>
+			</div>
+			<h6>
+				| <strong>Created at:</strong> <%= @article.created_at %> | <strong>Last modified :</strong> <%= @article.updated_at %> |
+			</h6>
+			<hr>
+			<p>
+				<%= @article.text %>
+			</p>
+			<hr>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-lg-9">
+			<h3>Comments</h3>
+			<hr>
+			<%= render @article.comments %>
+			<hr>
+			<%= link_to 'Back', articles_path, class: "btn btn-primary" %> 
+			<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-danger"  %>
+		</div>
+		<div class="col-lg-3">
+			<h3>Add a comment:</h3>
+			<hr>
+			<%= render "comments/form" %>
+		</div>
+	</div>	
+	
+</div>
+
+
+
+
